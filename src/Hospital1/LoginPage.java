@@ -84,7 +84,9 @@ public class LoginPage extends JFrame implements ActionListener {
                 String name = textfield.getText();
                 String pass = passfield.getText();
                 String q="select * from admin where username= '"+name+"' and password= '"+pass+"'";
+//                String q1="select * from doctor where username= '"+name+"' and password= '"+pass+"'";
                 ResultSet result = obj.stm.executeQuery(q);
+               // ResultSet resulr1 = obj.stm.executeQuery(q1);
                 if(result.next()){
                     new AdminHomePage();
                     frame.setVisible(false);
